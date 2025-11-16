@@ -1,6 +1,9 @@
 # 📊 Multi-Format Data Cleaning & Processing App  
 ### Upload → Clean → Visualize → Download
 
+[![Open In Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ewpqdxfwy5kyxthk7tjihs.streamlit.app/)
+
+
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-Cleaning-green.svg)
