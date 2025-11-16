@@ -17,17 +17,18 @@ An interactive **Streamlit application** that accepts multiple file formats (CSV
 ✔ Missing value imputation (mean/median)  
 ✔ Type conversion (object → numeric)  
 ✔ Whitespace & text normalization  
-✔ Outlier handling with Winsorization  
+✔ Outlier handling (Winsorization)  
 ✔ Duplicate removal  
 ✔ Optional numeric scaling  
 ✔ Interactive visualizations  
 ✔ Download cleaned data in the **same format**  
-✔ Fully Python-based (pandas, numpy, sklearn, seaborn, matplotlib)  
-✔ Streamlit frontend for clean UI  
+✔ 100% Python-based (pandas, numpy, sklearn, seaborn, matplotlib)  
+✔ Clean Streamlit UI  
 
 ---
 
 ## 📂 Project Structure
+```
 multi_format_cleaner_project/
 │── app.py
 │── requirements.txt
@@ -38,8 +39,8 @@ multi_format_cleaner_project/
 ├── src/
 │ ├── extractor.py # Detects file type & loads datasets
 │ ├── cleaner.py # Cleaning pipeline
-│ ├── visualizer.py # Graphs (EDA)
-│ └── exporter.py # Saves cleaned data in the same input format
+│ ├── visualizer.py # EDA plots
+│ └── exporter.py # Saves cleaned data in same format
 │
 ├── data/
 │ ├── raw/ # Dirty sample datasets (CSV, Excel, JSON, TSV)
@@ -48,6 +49,7 @@ multi_format_cleaner_project/
 └── notebooks/
 └── demo.ipynb # Example Jupyter Notebook usage
 
+```
 
 ---
 
@@ -57,3 +59,48 @@ multi_format_cleaner_project/
 git clone https://github.com/YOUR_USERNAME/multi-format-data-cleaner
 cd multi-format-data-cleaner
 pip install -r requirements.txt
+streamlit run app.py
+```
+
+
+## 🧼 Cleaning Pipeline Includes
+
+- Type conversion (numeric parsing)
+- Text normalization (strip + title case)
+- Missing-value handling (mean/median)
+- Duplicate removal
+- Outlier capping (Winsorization)
+- Optional numerical scaling
+- Produces ML/analytics-ready dataset
+
+## 📊 Visualizations Generated
+
+- Missing values bar chart  
+- Histogram + KDE plot  
+- Boxplot  
+- Correlation heatmap  
+
+## 📤 Download Cleaned Data
+
+| Input Format | Output Format |
+|--------------|---------------|
+| `.csv`       | `.csv`        |
+| `.xlsx`      | `.xlsx`       |
+| `.json`      | `.json`       |
+| `.txt`       | `.txt/.tsv`   |
+| `.tsv`       | `.tsv`        |
+
+
+## 🌐 Deployment (Streamlit Cloud)
+
+1. Push this project to GitHub  
+2. Visit: https://share.streamlit.io  
+3. Select your GitHub repository  
+4. Choose `app.py` as the main file  
+5. Deploy! 🚀  
+
+## 📝 License
+This project is licensed under the MIT License.
+
+## 👤 Author
+Akansha Ojha
