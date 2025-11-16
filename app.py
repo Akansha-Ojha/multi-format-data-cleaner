@@ -32,10 +32,13 @@ else:
 st.subheader('Raw data preview')
 st.dataframe(df.head())
 
+from io import StringIO
+
 with st.expander('Raw data info'):
-    bio = BytesIO()
-    df.info(buf=bio)
-    st.text(bio.getvalue().decode())
+    buffer = StringIO()
+    df.info(buf=buffer)
+    st.text(buffer.getvalue())
+
 
 st.subheader('Missing values per column')
 st.bar_chart(df.isnull().sum())
